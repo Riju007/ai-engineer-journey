@@ -45,7 +45,9 @@ def standard_deviation(data: list[float | int]) -> float:
     len_data, is_valid_data = check_input_list_is_valid(data)
     if is_valid_data:
         squared_difference_list = squared_differences(data, len_data)
+        print(f"Squared diff list: {squared_difference_list}")
         variance = get_list_sum(squared_difference_list) / len_data
+        print(f"Variance is: {variance}")
         std = sqrt(variance)
         return std
     else:
@@ -58,7 +60,7 @@ if __name__ == "__main__":
     # print(f"Mean value 01 is: {mean_value_01}")
     # squared_diff = squared_differences(input_list_01)
     # print(f"Sqrt list: {squared_diff}")
-    input_list_01 = [10, 12, 14]
+    input_list_01 = [2, 4, 6, 8]
     # input_list_01 = []
     # input_list_01 = ["a", "b", 1, 5, 7]
     std = standard_deviation(input_list_01)
